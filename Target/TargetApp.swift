@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TargetApp: App {
+    @StateObject var userInfo = UserInfo()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigatorView().environmentObject(userInfo)
         }
     }
 }
